@@ -1,0 +1,247 @@
+/* Tudo */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #a9a1a1;
+}
+
+a {
+    transition: 0.3s ease;
+    color: #a9a1a1;
+    text-decoration: none;
+}
+
+h2 {
+    text-align: left;
+
+}
+
+h1 {
+    text-align: center;
+    margin: 0.8rem;
+}
+
+/* Body */
+
+body {
+    background: linear-gradient(#151515, #292929);
+}
+
+/* header */
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1rem 0.5rem;
+    border-bottom: 2px solid #3F4D47;
+    height: 10svh;
+}
+
+#logo {
+    height: 99%;
+    width: 77.46px;
+}
+
+/* nav */
+nav {
+    height: 5svh;
+}
+
+.barra {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.opnav {
+    list-style: none;
+    margin: 0.2rem;
+    border: 1px solid transparent;
+}
+
+.opnav:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* section */
+.subir {
+    height: 2rem;
+    width: 2rem;
+    background-color: #3F4D47;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 2px;
+    margin-top: 50%;
+}
+
+section {
+    transition: 5s ease-in-out;
+
+}
+
+#alertaBat {
+    width: 100%;
+    /* ele fica oculto fora do elemento pai */
+    overflow: hidden;
+    position: relative;
+    height: 2rem;
+}
+
+#alertaBat p {
+    color: rgb(225, 163, 28);
+    white-space: nowrap;
+    position: absolute;
+    animation: lop 5.5s linear infinite;
+    font-size: 13.5pt;
+}
+
+.imgPed {
+    height: 120px;
+    width: 120px;
+    border-radius: 8px;
+    margin: 0.1rem;
+    /* box-shadow: 0 0 4px 8px #0000001a; */
+}
+
+/* class */
+
+
+.pedido {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-items: start;
+    align-items: center;
+    padding: 5px ;
+
+}
+    .nomeBurguer {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .imgPed {
+        grid-area: 1 / 1 / 3 / 2;
+    }
+
+    .preco {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .desc {
+        grid-area: 1 / 3 / 3 / 4;
+    }
+
+.preco {
+    font-size: 12pt;
+}
+
+.preco::before {
+    content: 'R$';
+    font-size: 14pt;
+}
+
+/* animação */
+
+@keyframes lop {
+    0% {
+        left: -100%;
+    }
+
+    25% {
+        left: 0%;
+    }
+
+    50% {
+        left: 0%;
+    }
+
+    75% {
+        left: 0%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+    .acais {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 10px;
+        /* background: linear-gradient(to bottom, #4b134f, #8e044f); fundo roxo tipo açaí */
+        background: linear-gradient(rgba(64, 10, 64, 0.675), rgba(17, 16, 16, 0), rgba(64, 10, 64, 0.675), rgb(44, 2, 44));
+        color: #fff;
+      }
+  
+      .acai-card {
+        background-color: #5e2c6c; /* roxo escuro */
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        padding: 30px;
+        margin-bottom: 20px;
+        transition: transform 0.2s;
+        
+      }
+  
+      .acai-card:hover {
+        transform: scale(1.02);
+      }
+  
+      .acai-card img {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        align-items:end;
+      }
+  
+      .acai-card h3 {
+        margin-top: 0;
+        color: #e4e4e4; /* amarelo claro para destaque */
+      }
+  
+      .acai-card p {
+        margin: 8px 0;
+        align-items: center;
+      }
+  
+      .precos {
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+      }
+  
+      .precos div {
+        background-color: #712d80; /* roxo mais claro */
+        padding: 8px;
+        border-radius: 6px;
+        text-align: center;
+        color: #fff;
+      }
+  
+      .precos span {
+        font-weight: bold;
+        display: block;
+        color: #ffffff;
+      }
+      img{
+        text-align: center;
+      }
+      .nomeAcai{
+        font-size: large;
+      }
