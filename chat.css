@@ -1,0 +1,303 @@
+/* ===== Reset e Base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #121212;
+    color: #f1f1f1;
+    line-height: 1.6;
+    padding-bottom: 80px;
+    font-size: 16px;
+}
+
+/* ===== Cabeçalho ===== */
+header {
+    text-align: center;
+    padding: 15px 10px 10px 25px;
+    background: #1f1f1f;
+    color: #fff;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #e63946;
+}
+
+header img {
+    width: 70px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.6);
+}
+
+header h1 {
+    font-size: 1.6rem;
+    margin-top: 5px;
+}
+
+/* ===== Navegação ===== */
+nav {
+    background: #222;
+    padding: 10px;
+    top: 80px;
+    z-index: 900;
+}
+
+nav .barra {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav .opnav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: background 0.3s;
+}
+
+nav .opnav a:active,
+nav .opnav a:hover {
+    background: #e63946;
+    color: #fff;
+}
+
+/* ===== Botão subir ===== */
+.subir {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background: #e63946;
+    color: #fff;
+    padding: 12px 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+}
+
+.subir:active {
+    background: #d62828;
+}
+
+/* ===== Mensagem batata ===== */
+#alertaBat {
+    overflow: hidden;
+    white-space: nowrap;
+    background: #333;
+    padding: 12px;
+    margin: 15px 10px;
+    border-radius: 8px;
+    position: relative;
+}
+
+#alertaBat p {
+    display: inline-block;
+    padding-left: 100%;
+    font-weight: bold;
+    color: #ffeb3b;
+    animation: slideMessage 10s linear infinite;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+@keyframes slideMessage {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* ===== Seções ===== */
+section {
+    padding: 20px 12px;
+}
+
+section h1 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #e63946;
+    text-align: center;
+}
+
+/* ===== Cards ===== */
+.pedido {
+    background: #1f1f1f;
+    border-radius: 14px;
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 95%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    
+}
+
+.imgPed {
+    width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    
+}
+
+/* Nome e preço */
+.nomeBurguer,
+.nomeBebida,
+.nomeAcresc {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.preco {
+    font-weight: bold;
+    color: #ff4d6d;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.desc {
+    font-size: 0.9rem;
+    color: #ccc;
+    text-align: center;
+}
+
+/* ===== Açaí ===== */
+.acais {
+    background: #2a003f;
+    padding: 25px 12px;
+}
+
+.acais h1 {
+    color: #d57ff5;
+}
+
+.acai-card {
+    background: #3d0057;
+    border-radius: 14px;
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 95%;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.acai-card img {
+    width: 100%;
+    max-width: 180px;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+.acai-card h2 {
+    margin: 8px 0;
+    font-size: 1.2rem;
+    color: #f2b5ff;
+}
+
+.acai-card p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: #f1f1f1;
+}
+
+.precos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.precos div {
+    background: #7b2cbf;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* ===== Responsividade (PC) ===== */
+@media (min-width: 768px) {
+    .pedidos,
+    .acais {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* ===== Responsividade (Mobile) ===== */
+@media (max-width: 768px) {
+    .pedidos,
+    .acais {
+        display: block;
+    }
+
+    .pedido, .acai-card {
+        margin: 15px 10px;
+    }
+
+    .botao-adicionar,
+    .botao-finalizar {
+        width: 100%;
+        padding: 14px;
+    }
+}
+
+/* Foco nos botões */
+.botao-adicionar:focus,
+.botao-finalizar:focus {
+    outline: 3px solid #e63946;
+    outline-offset: 2px;
+}
+
+/* ===== Botões ===== */
+.botao-adicionar {
+    background: #e63946;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin-top: 10px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: background 0.3s;
+}
+
+.botao-adicionar:hover {
+    background: #d62828;
+}
+
+.botao-finalizar {
+    background: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.botao-finalizar:hover {
+    background: #27ae60;
+}
